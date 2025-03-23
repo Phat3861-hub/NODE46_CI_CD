@@ -24,7 +24,7 @@ app.use(
   })
 );
 
-app.use(express.static("."))
+app.use(express.static("."));
 
 app.use(rootRouter);
 
@@ -33,9 +33,7 @@ app.use(handleError);
 // socket client - server
 const httpServer = createServer(app);
 
-initSocket(httpServer)
-
-
+initSocket(httpServer);
 
 httpServer.listen(3069, () => {
   console.log(`Server Online At Port 3069`);
